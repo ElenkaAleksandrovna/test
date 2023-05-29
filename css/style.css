@@ -1,0 +1,499 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Inter:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:regular&display=swap);
+
+/* @charset "UTF-8"; */
+
+* {
+   padding: 0px;
+   margin: 0px;
+   border: 0px;
+}
+
+*,
+*:before,
+*:after {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   min-width: 320px;
+}
+
+body {
+   line-height: 1;
+   font-family: "Inter", sans-serif;
+   font-size: 1rem;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+   font-family: "Inter", sans-serif;
+   font-size: inherit;
+}
+
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: inherit;
+}
+
+a {
+   -webkit-transition: color 0.3s ease 0s;
+   -o-transition: color 0.3s ease 0s;
+   transition: color 0.3s ease 0s;
+   color: inherit;
+}
+
+a:link,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+
+.lock body {
+   overflow: hidden;
+   -ms-touch-action: none;
+   touch-action: none;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.wrapper>main {
+   position: relative;
+   z-index: 2;
+   -webkit-box-flex: 1;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+}
+
+.wrapper>* {
+   min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+   position: relative;
+   z-index: 2;
+   max-width: 75rem;
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+   margin: 0 auto;
+   padding: 0 0.9375rem;
+}
+
+[class*=__container_wide] {
+   max-width: 105rem;
+}
+
+.header {
+   position: relative;
+   background: url("../img/header_bg.jpg") 0 0/cover;
+}
+
+.header__container {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   padding-top: 2.6rem;
+   padding-bottom: 3.2rem;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.header__logo {
+   margin-right: 1.2rem;
+}
+
+.header__item {
+   margin-right: 5.5rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.header__item-contact {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-align: end;
+   -ms-flex-align: end;
+   align-items: flex-end;
+   margin-right: 2.1rem;
+}
+
+.header__title {
+   font-family: "Oswald", sans-serif;
+   font-size: 2.5rem;
+   line-height: 145%;
+   text-transform: uppercase;
+   color: #fff;
+   margin-bottom: 7px;
+}
+
+.header__text {
+   font-size: 15px;
+   line-height: 145%;
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.8);
+}
+
+.header__phone {
+   display: block;
+   font-family: "Oswald";
+   font-style: normal;
+   font-weight: 400;
+   font-size: 29px;
+   line-height: 145%;
+   text-transform: uppercase;
+   color: #fff;
+   margin-bottom: 0.2rem;
+}
+
+.header__address {
+   font-size: 15px;
+   line-height: 145%;
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.header__button {
+   padding: 24px 38px;
+   font-size: 1rem;
+   line-height: 19px;
+   color: #212121;
+   background: #fff;
+   -webkit-box-shadow: 0px 15px 30px -12px #000;
+   box-shadow: 0px 15px 30px -12px #000;
+   border-radius: 3px;
+   margin-right: 1rem;
+}
+
+.header__decor {
+   padding: 0;
+   position: absolute;
+   top: 0;
+   right: 0;
+   max-width: 45%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   height: 100%;
+}
+
+.header__decor-mobile {
+   display: none;
+}
+
+.main {
+   background: -webkit-gradient(linear, left top, left bottom, from(#003471), color-stop(191.67%, #212121));
+   background: -o-linear-gradient(top, #003471 0%, #212121 191.67%);
+   background: linear-gradient(180deg, #003471 0%, #212121 191.67%);
+}
+
+.main__menu {
+   font-family: "Open Sans", sans-serif;
+   color: #fff;
+   padding: 14px 0px 12px 0px;
+}
+
+.main__menu-list {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.main__menu-item {
+   padding: 0 1rem;
+}
+
+.main__menu-link {
+   line-height: 22px;
+}
+
+.main__menu-link:hover {
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.header__sidebar {
+   display: none;
+}
+
+.header__whatsapp-text {
+   display: none;
+}
+
+@media (max-width: 1440px) {
+   .header__decor {
+      max-width: 60%;
+      right: -20%;
+   }
+}
+
+@media (max-width: 1100px) {
+   .header__decor {
+      max-width: 70%;
+      right: -20%;
+   }
+
+   .header__logo {
+      width: 60px;
+   }
+
+   .header__title {
+      font-size: 2rem;
+      line-height: 130%;
+   }
+
+   .header__button {
+      padding: 16px 28px;
+   }
+
+   .header__phone {
+      font-size: 20px;
+      line-height: 125%;
+   }
+}
+
+@media (max-width: 940px) {
+   .header__container {
+      padding-top: 2rem;
+      padding-bottom: 2.2rem;
+   }
+
+   .header__title {
+      font-size: 1.3rem;
+      line-height: 125%;
+   }
+
+   .header__item {
+      margin-right: 3rem;
+   }
+
+   .header__item-contact {
+      margin-right: 1.5rem;
+   }
+
+   .header__button {
+      padding: 12px 18px;
+   }
+
+   .header__address {
+      font-size: 12px;
+      line-height: 120%;
+   }
+
+   .header__text {
+      font-size: 12px;
+   }
+
+   .header__logo {
+      width: 45px;
+      margin-right: 1rem;
+   }
+
+   .main__menu-item {
+      padding: 0 0.7rem;
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 760px) {
+   .header__title {
+      font-size: 1.2rem;
+      line-height: 125%;
+   }
+
+   .header__item {
+      margin-right: 2rem;
+   }
+
+   .header__item-contact {
+      margin-right: 1rem;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      max-width: 145px;
+   }
+
+   .header__button {
+      font-size: 12px;
+      padding: 8px 12px;
+   }
+
+   .header__logo {
+      width: 40px;
+   }
+}
+
+@media (max-width: 636px) {
+   .main {
+      opacity: 0;
+   }
+
+   .header {
+      height: 100vh;
+      background: url("../img/header_bg_mobile.jpg") 0 0/cover;
+   }
+
+   .header__container {
+      text-align: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-top: 26px;
+   }
+
+   .header__item {
+      margin-bottom: 32px;
+   }
+
+   .header__item-contact {
+      max-width: 280px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 1rem;
+   }
+
+   .header__phone {
+      font-size: 23px;
+      margin-bottom: 24px;
+   }
+
+   .header__decor {
+      opacity: 0;
+   }
+
+   .header__logo {
+      width: 51px;
+   }
+
+   .header__content {
+      text-align: left;
+      margin-right: 0;
+   }
+
+   .header__title {
+      font-size: 28px;
+   }
+
+   .header__text {
+      font-size: 13px;
+      line-height: 145%;
+   }
+
+   .header__button {
+      margin-bottom: 21px;
+      margin-right: 0;
+      padding: 20px 40px;
+      font-size: 16px;
+      line-height: 19px;
+   }
+   .header__wa {
+      display: flex;
+   }
+   .header__icon-ws {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+   .header__whatsapp-text {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 17px;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 0 6px;
+   }
+
+   .header__decor-mobile {
+      display: block;
+      width: 100%;
+      position: absolute;
+      -o-object-fit: cover;
+      object-fit: cover;
+      bottom: 0;
+   }
+
+   .header__sidebar {
+      display: block;
+      background-color: #fff;
+   }
+
+   .sidebar__list {
+      max-width: 636px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 16px 14px;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+   }
+
+   .sidebar__item {
+      padding-left: 1rem;
+   }
+}
